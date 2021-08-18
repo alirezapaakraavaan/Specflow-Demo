@@ -11,11 +11,11 @@ namespace AccountManagement.Tests.Steps
         private Account _account;
         private string _result;
         private DataStore _store;
+        private readonly ScenarioContext _scenarioContext;
 
-        [When(@"i try to login")]
-        public void WhenITryToLogin()
+        public UserLoginToAccountSteps(ScenarioContext scenarioContext)
         {
-            _result = _account.Authenticate(_store);
+            _scenarioContext = scenarioContext;
         }
 
         [Given(@"i am (.*) with password (.*)")]
@@ -30,6 +30,12 @@ namespace AccountManagement.Tests.Steps
             //var account = table.CreateInstance<Account>();
             var accounts = table.CreateSet<Account>().ToList();
             _store = new DataStore(accounts);
+        }
+
+        [When(@"i try to login")]
+        public void WhenITryToLogin()
+        {
+            _result = _account.Authenticate(_store);
         }
 
         [Then(@"i should get message (.*)")]
