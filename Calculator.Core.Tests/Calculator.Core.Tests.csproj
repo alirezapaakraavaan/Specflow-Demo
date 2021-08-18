@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,15 +10,6 @@
 
     
     <PackageReference Include="SpecRun.SpecFlow" Version="3.9.7" />
-    
-
-    
-
-    
-
-    
-
-    
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
     
   </ItemGroup>
@@ -26,6 +17,10 @@
   <ItemGroup>
     <Folder Include="Drivers\" />
     <Folder Include="Hooks\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Calculator.Core\Calculator.Core.csproj" />
   </ItemGroup>
 
 </Project>

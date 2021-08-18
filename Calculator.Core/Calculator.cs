@@ -2,9 +2,12 @@
 {
     public class Calculator
     {
-        public int Add(int firstNumber, int secondNumber)
+        public int FirstNumber { get; set; }
+        public int SecondNumber { get; set; }
+
+        public int Add()
         {
-            return firstNumber + secondNumber;
+            return FirstNumber + SecondNumber;
         }
     }
 }

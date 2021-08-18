@@ -1,4 +1,6 @@
-﻿using TechTalk.SpecFlow;
+﻿using System.Collections.Generic;
+using FluentAssertions;
+using TechTalk.SpecFlow;
 
 namespace Calculator.Core.Tests.Steps
 {
@@ -6,6 +8,7 @@ namespace Calculator.Core.Tests.Steps
     public sealed class CalculatorStepDefinitions
     {
         private readonly ScenarioContext _scenarioContext;
+        private readonly Calculator _calculator = new Calculator();
 
         public CalculatorStepDefinitions(ScenarioContext scenarioContext)
         {
@@ -15,26 +18,26 @@ namespace Calculator.Core.Tests.Steps
         [Given("the first number is (.*)")]
         public void GivenTheFirstNumberIs(int number)
         {
-            _scenarioContext.Pending();
+            _calculator.FirstNumber = number;
         }
 
         [Given("the second number is (.*)")]
         public void GivenTheSecondNumberIs(int number)
         {
-            _scenarioContext.Pending();
+            _calculator.SecondNumber = number;
         }
 
         [When("the two numbers are added")]
         public void WhenTheTwoNumbersAreAdded()
         {
-            _scenarioContext.Pending();
+            _scenarioContext["add_result"] = _calculator.Add();
         }
-
 
         [Then("the result should be (.*)")]
         public void ThenTheResultShouldBe(int result)
         {
-            _scenarioContext.Pending();
+            var addResult = int.Parse(_scenarioContext.GetValueOrDefault("add_result")?.ToString() ?? string.Empty);
+            addResult.Should().Be(result);
         }
     }
 }

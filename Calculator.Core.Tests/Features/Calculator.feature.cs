@@ -19,7 +19,7 @@ namespace Calculator.Core.Tests.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Calculator", SourceFile="Features\\Calculator.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("Calculator", Description="Simple Calculator For Accountants", SourceFile="Features\\Calculator.feature", SourceLine=0)]
     public partial class CalculatorFeature
     {
         
@@ -34,7 +34,7 @@ namespace Calculator.Core.Tests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Calculator", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Calculator", "Simple Calculator For Accountants", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -71,14 +71,14 @@ namespace Calculator.Core.Tests.Features
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Add two numbers", new string[] {
-                "mytag"}, SourceLine=4)]
+                "calculator"}, SourceLine=5)]
         public virtual void AddTwoNumbers()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "calculator"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 5
+#line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -98,17 +98,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 6
+#line 7
  testRunner.Given("the first number is 50", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 7
+#line 8
  testRunner.And("the second number is 70", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 8
+#line 9
  testRunner.When("the two numbers are added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 9
- testRunner.Then("the result should be 120", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 10
+ testRunner.Then("the result should be 1202", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
