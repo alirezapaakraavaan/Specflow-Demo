@@ -7,8 +7,8 @@ namespace Calculator.Core.Tests.Steps
     [Binding]
     public sealed class CalculatorStepDefinitions
     {
-        private readonly ScenarioContext _scenarioContext;
         private readonly Calculator _calculator = new Calculator();
+        private readonly ScenarioContext _scenarioContext;
 
         public CalculatorStepDefinitions(ScenarioContext scenarioContext)
         {
