@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.Core", "Calculat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.Core.Tests", "Calculator.Core.Tests\Calculator.Core.Tests.csproj", "{5FC08AAF-E753-49FF-8E66-4CC93EC1D2D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountManagement.Tests", "AccountManagement.Tests\AccountManagement.Tests.csproj", "{C2E545BC-60FC-44E1-B94F-2BDFEFDC2AC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountManagement.Tests", "AccountManagement.Tests\AccountManagement.Tests.csproj", "{C2E545BC-60FC-44E1-B94F-2BDFEFDC2AC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountManagement", "AccountManagement\AccountManagement.csproj", "{05313F45-66D6-4E6C-83CD-630E3E9A387F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountManagement", "AccountManagement\AccountManagement.csproj", "{05313F45-66D6-4E6C-83CD-630E3E9A387F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -4,9 +4,11 @@ namespace AccountManagement
 {
     public class DataStore
     {
-        public static List<Account> Accounts = new List<Account>
+        public List<Account> Accounts;
+
+        public DataStore(List<Account> accounts)
         {
-            new Account("alireza", "123")
-        };
+            Accounts = accounts;
+        }
     }
 }

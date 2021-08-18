@@ -13,9 +13,11 @@ namespace AccountManagement
             Password = password;
         }
 
-        public string Authenticate()
+        public string Authenticate(DataStore store)
         {
-            return DataStore.Accounts.Any(x => x.Username == Username && x.Password == Password)
+            return store
+                .Accounts
+                .Any(x => x.Username == Username && x.Password == Password)
                 ? "Authenticated"
                 : "Access Denied";
         }

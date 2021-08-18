@@ -70,11 +70,13 @@ namespace AccountManagement.Tests.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("User Can Login To Account", SourceLine=2)]
-        public virtual void UserCanLoginToAccount()
+        public virtual void UserCanLoginToAccount(string username, string password, string result, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("username", username);
+            argumentsOfScenario.Add("password", password);
+            argumentsOfScenario.Add("result", result);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Can Login To Account", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 3
 this.ScenarioInitialize(scenarioInfo);
@@ -97,16 +99,32 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 4
- testRunner.Given("i am \'alireza\' with password \'123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("i am {0} with password {1}", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 5
  testRunner.When("i try to login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 6
- testRunner.Then("i should get message \'Authenticated\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("i should get message {0}", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("User Can Login To Account, alireza", SourceLine=9)]
+        public virtual void UserCanLoginToAccount_Alireza()
+        {
+#line 3
+this.UserCanLoginToAccount("alireza", "123", "Authenticated", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("User Can Login To Account, hasan", SourceLine=9)]
+        public virtual void UserCanLoginToAccount_Hasan()
+        {
+#line 3
+this.UserCanLoginToAccount("hasan", "32163546", "Access Denied", ((string[])(null)));
+#line hidden
         }
     }
 }
